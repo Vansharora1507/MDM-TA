@@ -1,0 +1,7 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "Full-stack Student Management System using Flask, SQLite, HTML, CSS and JavaScript",
+  "private": true,
+  "scripts": {"start": "python3 backend/app.py"}
+}
