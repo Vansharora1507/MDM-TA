@@ -68,6 +68,7 @@ def add_student():
         return jsonify(student_dict(row)), 201
     except Exception as exc:
         conn.rollback()
+        print("ERROR ADDING STUDENT:", repr(exc))
         if "UNIQUE constraint failed" in str(exc):
             return jsonify({"error": "Roll number already exists"}), 409
         return jsonify({"error": "Unable to add student"}), 500
